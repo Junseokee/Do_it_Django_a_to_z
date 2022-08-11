@@ -7,10 +7,12 @@ class Post(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
+
     head_image = models.ImageField(upload_to='blog/image/%Y/%m/%d/',
                                    blank=True)
     file_upload = models.FileField(upload_to='blog/files/%Y/%m/%d/',
                                    blank=True)
+    hook_text = models.CharField(max_length=100, blank=True)
     # author : 추후 작성예정
 
     def __str__(self):
