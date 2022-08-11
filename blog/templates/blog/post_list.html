@@ -24,7 +24,7 @@
                 <a class="btn btn-primary" href="{{ p.get_absolute_url}}">Read More &rarr;</a>
             </div>
         </div>
-        
+
             <div class="card-footer text-muted">
                 Posted on {{ p.created_at }} by
                 <a href="#">작성자명 쓸 위치</a>
@@ -33,5 +33,8 @@
 
         <hr/>
         {% endfor %}
+
+        <link href="./bootstrap5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/67a9f89250.js" crossorigin="anonymous"></script>
     </body>
 </html>
