@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from dgjango.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView
 from .models import Post
 
 
