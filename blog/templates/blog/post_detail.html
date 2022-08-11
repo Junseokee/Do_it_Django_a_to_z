@@ -47,12 +47,23 @@
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
                         </header>
                         <!-- Preview image figure-->
-                        <figure class="mb-4"><img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="..." /></figure>
+                        <figure class="mb-4">
+                            {% if p.head_image %}
+                                <img class="img-fluid rounded"
+                                     src = "{{ post.head_image.url }}"
+                                     alt="{{ post.title }}"/></a>
+
+                            {% else %}
+                                <img class="card-img-top"
+                                     src = "http://picsum.photos/seed/{{ p.id }}/800.200"
+                                   alt="{{ post.title }}"/></a>
+                            {% endif %}
                         <!-- Post content-->
                         <section class="mb-5">
                             <p>
                                 {{ post.content }}
                             </p>
+
                         </section>
                     </article>
                     <!-- Comments section-->
